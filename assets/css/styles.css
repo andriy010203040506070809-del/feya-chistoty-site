@@ -546,15 +546,15 @@ h2.title { font-size: var(--fz-h2); margin-bottom: 1rem; }
 
 /* ===================== ПРО НАС / ТЕТЯНА ===================== */
 .tetyana-grid { display:grid; gap:2.6rem; margin-top:var(--section-y); }
-@media (min-width:980px){ .tetyana-grid { grid-template-columns:.9fr 1.1fr; gap:3.5rem; } }
+@media (min-width:980px){ .tetyana-grid { grid-template-columns:.95fr 1.05fr; gap:2.5rem; } }
 
-.tetyana-video__inner { aspect-ratio:3/4; border-radius:clamp(20px,3vw,32px);
+.tetyana-video__inner { aspect-ratio:16/10; border-radius:clamp(20px,3vw,32px);
   background:var(--c-field); border:2px dashed var(--c-line);
   display:flex; flex-direction:column; align-items:center; justify-content:center;
   gap:1.2rem; box-shadow:var(--sh-card); }
 .tetyana-video__inner--real { position:relative; border:none !important; background:#000; overflow:hidden; }
 .tetyana-video__player { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
-@media (max-width:768px){ .tetyana-video__inner { aspect-ratio:9/16; max-height:520px; } }
+@media (max-width:768px){ .tetyana-video__inner { aspect-ratio:3/4; } }
 .tetyana-video__inner--real .tetyana-video__play { position:absolute; z-index:2;
   top:50%; left:50%; transform:translate(-50%,-50%);
   cursor:pointer; border:none; transition:opacity .3s, transform .3s; }
