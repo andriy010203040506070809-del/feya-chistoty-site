@@ -4,7 +4,7 @@
 // ============================================================
 
 var FORM_ENDPOINT = 'https://script.google.com/macros/s/AKfycbzqOwoVb0miZXMa1jMPQPPMc-TyOUdquaGuVq7WI83mS1Kgi8DXi1uW4rPKDPajJKHEGg/exec';
-var THANKS_URL = '/dyakuyemo.html';
+var THANKS_URL = 'dyakuyemo.html';
 
 var IC = {
   phone: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>',
@@ -23,16 +23,16 @@ var IC = {
 var HEADER_HTML = `
 <header class="site-header" id="siteHeader">
   <div class="hdr-inner">
-    <a class="brand" href="/">
-      <img class="brand__logo" src="/assets/img/Головний%20логотип.png" alt="ФЕЯ ЧИСТОТИ" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
+    <a class="brand" href="index.html">
+      <img class="brand__logo" src="assets/img/Головний%20логотип.png" alt="ФЕЯ ЧИСТОТИ" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
       <span class="brand__fallback">Ф</span>
     </a>
     <nav class="hdr-nav" id="navLinks">
-      <a class="hn" href="/#poslugy">Послуги</a>
-      <a class="hn" href="/#garantiyi">Гарантії</a>
-      <a class="hn" href="/#ciny">Ціни</a>
-      <a class="hn" href="/#vidhuky">Відгуки</a>
-      <a class="hn" href="/kontakty.html">Контакти</a>
+      <a class="hn" href="index.html#poslugy">Послуги</a>
+      <a class="hn" href="index.html#garantiyi">Гарантії</a>
+      <a class="hn" href="index.html#ciny">Ціни</a>
+      <a class="hn" href="index.html#vidhuky">Відгуки</a>
+      <a class="hn" href="kontakty.html">Контакти</a>
       <div class="mob-nav-footer">
         <a class="hsoc" href="https://instagram.com/feya_chistoty_cv_new" target="_blank" rel="noopener" aria-label="Instagram"><i class="ic">`+IC.ig+`</i></a>
         <a class="hsoc" href="#" aria-label="Telegram"><i class="ic">`+IC.tg+`</i></a>
@@ -53,10 +53,10 @@ var FOOTER_HTML = `
   <div class="container">
     <div class="footer__top">
       <div class="footer__brand">
-        <a class="footer__logo" href="/">
-          <img src="/assets/img/Головний%20логотип.png" alt="ФЕЯ ЧИСТОТИ" class="footer__logo-img">
+        <a class="footer__logo" href="index.html">
+          <img src="assets/img/Головний%20логотип.png" alt="ФЕЯ ЧИСТОТИ" class="footer__logo-img">
         </a>
-        <p class="footer__desc">Більше 13 років на ринку. Сертифікована хімія, фінансова відповідальність за майно, гарантія якості 7 днів.</p>
+        <p class="footer__desc">Більше 13 років на ринку. Сертифікована хімія, фінансова відповідальність за майно, гарантія на прибирання.</p>
         <div class="footer__social">
           <a href="https://instagram.com/feya_chistoty_cv_new" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
           <a href="tel:+380508149859" aria-label="Телефон"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></a>
@@ -67,23 +67,23 @@ var FOOTER_HTML = `
         <div>
           <h4>Послуги</h4>
           <ul>
-            <li><a href="/generalne.html">Генеральне прибирання</a></li>
-            <li><a href="/regulyarne.html">Регулярне прибирання</a></li>
-            <li><a href="/pislya-remontu.html">Після ремонту</a></li>
-            <li><a href="/komerciyniy.html">Комерційний клінінг</a></li>
-            <li><a href="/himchystka-mebliv.html">Хімчистка меблів</a></li>
-            <li><a href="/myttya-vikon.html">Миття вікон</a></li>
-            <li><a href="/himchystka-avto.html">Хімчистка авто</a></li>
+            <li><a href="generalne.html">Генеральне прибирання</a></li>
+            <li><a href="regulyarne.html">Регулярне прибирання</a></li>
+            <li><a href="pislya-remontu.html">Після ремонту</a></li>
+            <li><a href="komerciyniy.html">Комерційний клінінг</a></li>
+            <li><a href="himchystka-mebliv.html">Хімчистка меблів</a></li>
+            <li><a href="myttya-vikon.html">Миття вікон</a></li>
+            <li><a href="himchystka-avto.html">Хімчистка авто</a></li>
           </ul>
         </div>
         <div>
           <h4>Компанія</h4>
           <ul>
-            <li><a href="/#pro-nas">Про нас</a></li>
-            <li><a href="/#garantiyi">Гарантії</a></li>
-            <li><a href="/ciny.html">Ціни</a></li>
-            <li><a href="/blog.html">Блог</a></li>
-            <li><a href="/kontakty.html">Контакти</a></li>
+            <li><a href="index.html#pro-nas">Про нас</a></li>
+            <li><a href="index.html#garantiyi">Гарантії</a></li>
+            <li><a href="ciny.html">Ціни</a></li>
+            <li><a href="blog.html">Блог</a></li>
+            <li><a href="kontakty.html">Контакти</a></li>
           </ul>
         </div>
         <div>
@@ -100,7 +100,7 @@ var FOOTER_HTML = `
     </div>
     <div class="footer__bottom">
       <span>© <span id="year"></span> ФЕЯ ЧИСТОТИ, Чернівці</span>
-      <span><a href="/polityka.html">Політика конфіденційності</a> · <a href="/umovy.html">Умови</a></span>
+      <span><a href="polityka.html">Політика конфіденційності</a> · <a href="umovy.html">Умови</a></span>
     </div>
   </div>
 </footer>`;
@@ -126,11 +126,11 @@ var QUIZ_HTML = `
       <div class="quiz__step active" data-key="Тип обєкта">
         <div class="quiz__qhead"><span class="quiz__qnum">Питання 1</span><p class="quiz__q">Який у вас об'єкт?</p></div>
         <div class="quiz__opts">
-          <button type="button" class="quiz__opt"><span class="quiz__opt-media"><img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=400&q=70&auto=format&fit=crop" alt="" loading="lazy"></span><span class="quiz__opt-check" aria-hidden="true"></span><span class="quiz__opt-label">Квартира</span></button>
-          <button type="button" class="quiz__opt"><span class="quiz__opt-media"><img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=400&q=70&auto=format&fit=crop" alt="" loading="lazy"></span><span class="quiz__opt-check" aria-hidden="true"></span><span class="quiz__opt-label">Будинок / котедж</span></button>
-          <button type="button" class="quiz__opt"><span class="quiz__opt-media"><img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=400&q=70&auto=format&fit=crop" alt="" loading="lazy"></span><span class="quiz__opt-check" aria-hidden="true"></span><span class="quiz__opt-label">Офіс</span></button>
-          <button type="button" class="quiz__opt"><span class="quiz__opt-media"><img src="https://res.cloudinary.com/dv4xqeucm/image/upload/v1783343926/quiz1-4_ywkoae.jpg" alt="" loading="lazy"></span><span class="quiz__opt-check" aria-hidden="true"></span><span class="quiz__opt-label">Магазин</span></button>
-          <button type="button" class="quiz__opt"><span class="quiz__opt-media"><img src="https://res.cloudinary.com/dv4xqeucm/image/upload/v1783343926/quiz1-5_rospun.jpg" alt="" loading="lazy"></span><span class="quiz__opt-check" aria-hidden="true"></span><span class="quiz__opt-label">Кафе / ресторан</span></button>
+          <button type="button" class="quiz__opt"><span class="quiz__opt-media"><img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=400&q=70&auto=format&fit=crop" alt="Квартира" loading="lazy"></span><span class="quiz__opt-check" aria-hidden="true"></span><span class="quiz__opt-label">Квартира</span></button>
+          <button type="button" class="quiz__opt"><span class="quiz__opt-media"><img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=400&q=70&auto=format&fit=crop" alt="Будинок" loading="lazy"></span><span class="quiz__opt-check" aria-hidden="true"></span><span class="quiz__opt-label">Будинок / котедж</span></button>
+          <button type="button" class="quiz__opt"><span class="quiz__opt-media"><img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=400&q=70&auto=format&fit=crop" alt="Офіс" loading="lazy"></span><span class="quiz__opt-check" aria-hidden="true"></span><span class="quiz__opt-label">Офіс</span></button>
+          <button type="button" class="quiz__opt"><span class="quiz__opt-media"><img src="https://res.cloudinary.com/dv4xqeucm/image/upload/v1783343926/quiz1-4_ywkoae.jpg" alt="Магазин" loading="lazy"></span><span class="quiz__opt-check" aria-hidden="true"></span><span class="quiz__opt-label">Магазин</span></button>
+          <button type="button" class="quiz__opt"><span class="quiz__opt-media"><img src="https://res.cloudinary.com/dv4xqeucm/image/upload/v1783343926/quiz1-5_rospun.jpg" alt="Кафе" loading="lazy"></span><span class="quiz__opt-check" aria-hidden="true"></span><span class="quiz__opt-label">Кафе / ресторан</span></button>
           <button type="button" class="quiz__opt quiz__opt--other"><span class="quiz__opt-media"><span class="quiz__opt-q" aria-hidden="true">?</span></span><span class="quiz__opt-check" aria-hidden="true"></span><span class="quiz__opt-label">Інше</span></button>
         </div>
       </div>
@@ -138,11 +138,11 @@ var QUIZ_HTML = `
       <div class="quiz__step" data-key="Послуга">
         <div class="quiz__qhead"><span class="quiz__qnum">Питання 2</span><p class="quiz__q">Яка послуга потрібна?</p></div>
         <div class="quiz__opts">
-          <button type="button" class="quiz__opt"><span class="quiz__opt-media"><img src="https://res.cloudinary.com/dv4xqeucm/image/upload/v1782988502/%D0%91%D0%B5%D0%B7_%D0%BD%D0%B0%D0%B7%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F_5_h5dnlw.png" alt="" loading="lazy"></span><span class="quiz__opt-check" aria-hidden="true"></span><span class="quiz__opt-label">Генеральне</span></button>
-          <button type="button" class="quiz__opt"><span class="quiz__opt-media"><img src="https://res.cloudinary.com/dv4xqeucm/image/upload/v1782745990/%D0%A0%D0%B5%D0%B3%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%B5_%D0%BF%D1%80%D0%B8%D0%B1%D0%B8%D1%80%D0%B0%D0%BD%D0%BD%D1%8F_0_dcisww.jpg" alt="" loading="lazy" style="object-position:center bottom"></span><span class="quiz__opt-check" aria-hidden="true"></span><span class="quiz__opt-label">Регулярне</span></button>
-          <button type="button" class="quiz__opt"><span class="quiz__opt-media"><img src="https://res.cloudinary.com/dv4xqeucm/image/upload/v1782745989/%D0%9F%D1%81%D0%BB%D1%8F%D1%80%D0%B5%D0%BC%D0%BE%D0%BD%D1%82%D0%BD%D0%B5_%D0%BF%D1%80%D0%B8%D0%B1%D0%B8%D1%80%D0%B0%D0%BD%D0%BD%D1%8F_2_dmvbgq.jpg" alt="" loading="lazy"></span><span class="quiz__opt-check" aria-hidden="true"></span><span class="quiz__opt-label">Після ремонту</span></button>
-          <button type="button" class="quiz__opt"><span class="quiz__opt-media"><img src="https://res.cloudinary.com/dv4xqeucm/image/upload/v1782988042/%D0%91%D0%B5%D0%B7_%D0%BD%D0%B0%D0%B7%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F_3_qvrq5f.png" alt="" loading="lazy"></span><span class="quiz__opt-check" aria-hidden="true"></span><span class="quiz__opt-label">Хімчистка меблів</span></button>
-          <button type="button" class="quiz__opt"><span class="quiz__opt-media"><img src="https://res.cloudinary.com/dv4xqeucm/image/upload/v1782745989/%D0%9C%D0%B8%D1%82%D1%82%D1%8F_%D0%B2%D1%96%D0%BA%D0%BE%D0%BD_%D1%82%D0%B0_%D0%B2%D1%96%D1%82%D1%80%D0%B8%D0%BD_0_htvif1.png" alt="" loading="lazy"></span><span class="quiz__opt-check" aria-hidden="true"></span><span class="quiz__opt-label">Миття вікон</span></button>
+          <button type="button" class="quiz__opt"><span class="quiz__opt-media"><img src="https://res.cloudinary.com/dv4xqeucm/image/upload/v1782988502/%D0%91%D0%B5%D0%B7_%D0%BD%D0%B0%D0%B7%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F_5_h5dnlw.png" alt="Генеральне прибирання" loading="lazy"></span><span class="quiz__opt-check" aria-hidden="true"></span><span class="quiz__opt-label">Генеральне</span></button>
+          <button type="button" class="quiz__opt"><span class="quiz__opt-media"><img src="https://res.cloudinary.com/dv4xqeucm/image/upload/v1782745990/%D0%A0%D0%B5%D0%B3%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%B5_%D0%BF%D1%80%D0%B8%D0%B1%D0%B8%D1%80%D0%B0%D0%BD%D0%BD%D1%8F_0_dcisww.jpg" alt="Регулярне прибирання" loading="lazy" style="object-position:center bottom"></span><span class="quiz__opt-check" aria-hidden="true"></span><span class="quiz__opt-label">Регулярне</span></button>
+          <button type="button" class="quiz__opt"><span class="quiz__opt-media"><img src="https://res.cloudinary.com/dv4xqeucm/image/upload/v1782745989/%D0%9F%D1%81%D0%BB%D1%8F%D1%80%D0%B5%D0%BC%D0%BE%D0%BD%D1%82%D0%BD%D0%B5_%D0%BF%D1%80%D0%B8%D0%B1%D0%B8%D1%80%D0%B0%D0%BD%D0%BD%D1%8F_2_dmvbgq.jpg" alt="Прибирання після ремонту" loading="lazy"></span><span class="quiz__opt-check" aria-hidden="true"></span><span class="quiz__opt-label">Після ремонту</span></button>
+          <button type="button" class="quiz__opt"><span class="quiz__opt-media"><img src="https://res.cloudinary.com/dv4xqeucm/image/upload/v1782988042/%D0%91%D0%B5%D0%B7_%D0%BD%D0%B0%D0%B7%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F_3_qvrq5f.png" alt="Хімчистка меблів" loading="lazy"></span><span class="quiz__opt-check" aria-hidden="true"></span><span class="quiz__opt-label">Хімчистка меблів</span></button>
+          <button type="button" class="quiz__opt"><span class="quiz__opt-media"><img src="https://res.cloudinary.com/dv4xqeucm/image/upload/v1782745989/%D0%9C%D0%B8%D1%82%D1%82%D1%8F_%D0%B2%D1%96%D0%BA%D0%BE%D0%BD_%D1%82%D0%B0_%D0%B2%D1%96%D1%82%D1%80%D0%B8%D0%BD_0_htvif1.png" alt="Миття вікон" loading="lazy"></span><span class="quiz__opt-check" aria-hidden="true"></span><span class="quiz__opt-label">Миття вікон</span></button>
           <button type="button" class="quiz__opt quiz__opt--other"><span class="quiz__opt-media"><span class="quiz__opt-q" aria-hidden="true">?</span></span><span class="quiz__opt-check" aria-hidden="true"></span><span class="quiz__opt-label">Інше</span></button>
         </div>
       </div>
@@ -160,9 +160,9 @@ var QUIZ_HTML = `
       <div class="quiz__step" data-key="Коли">
         <div class="quiz__qhead"><span class="quiz__qnum">Питання 4</span><p class="quiz__q">Коли потрібно?</p></div>
         <div class="quiz__opts">
-          <button type="button" class="quiz__opt"><span class="quiz__opt-media"><img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=400&q=70&auto=format&fit=crop" alt="" loading="lazy"></span><span class="quiz__opt-check" aria-hidden="true"></span><span class="quiz__opt-label">Сьогодні</span></button>
-          <button type="button" class="quiz__opt"><span class="quiz__opt-media"><img src="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?w=400&q=70&auto=format&fit=crop" alt="" loading="lazy"></span><span class="quiz__opt-check" aria-hidden="true"></span><span class="quiz__opt-label">Цими днями</span></button>
-          <button type="button" class="quiz__opt"><span class="quiz__opt-media"><img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=400&q=70&auto=format&fit=crop" alt="" loading="lazy"></span><span class="quiz__opt-check" aria-hidden="true"></span><span class="quiz__opt-label">Планую заздалегідь</span></button>
+          <button type="button" class="quiz__opt"><span class="quiz__opt-media"><img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=400&q=70&auto=format&fit=crop" alt="Сьогодні" loading="lazy"></span><span class="quiz__opt-check" aria-hidden="true"></span><span class="quiz__opt-label">Сьогодні</span></button>
+          <button type="button" class="quiz__opt"><span class="quiz__opt-media"><img src="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?w=400&q=70&auto=format&fit=crop" alt="Цими днями" loading="lazy"></span><span class="quiz__opt-check" aria-hidden="true"></span><span class="quiz__opt-label">Цими днями</span></button>
+          <button type="button" class="quiz__opt"><span class="quiz__opt-media"><img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=400&q=70&auto=format&fit=crop" alt="Планую заздалегідь" loading="lazy"></span><span class="quiz__opt-check" aria-hidden="true"></span><span class="quiz__opt-label">Планую заздалегідь</span></button>
         </div>
       </div>
 
