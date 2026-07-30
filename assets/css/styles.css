@@ -546,7 +546,7 @@ h2.title { font-size: var(--fz-h2); margin-bottom: 1rem; }
 
 /* ===================== ПРО НАС / ТЕТЯНА ===================== */
 .tetyana-grid { display:grid; gap:2.6rem; margin-top:var(--section-y); }
-@media (min-width:980px){ .tetyana-grid { grid-template-columns:.75fr 1.25fr; gap:3.5rem; } }
+@media (min-width:980px){ .tetyana-grid { grid-template-columns:.9fr 1.1fr; gap:3.5rem; } }
 
 .tetyana-video__inner { aspect-ratio:3/4; border-radius:clamp(20px,3vw,32px);
   background:var(--c-field); border:2px dashed var(--c-line);
