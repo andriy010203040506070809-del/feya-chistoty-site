@@ -583,7 +583,24 @@ document.addEventListener('DOMContentLoaded', function () {
   initCursor();
   initQuizEraser();
   initZoneTabs();
+  initTetyanaVideo();
 });
+
+function initTetyanaVideo() {
+  var btn = document.querySelector('.tetyana-video__inner--real .tetyana-video__play');
+  if (!btn) return;
+  var wrap = btn.closest('.tetyana-video__inner');
+  var vid = wrap.querySelector('.tetyana-video__player');
+  btn.addEventListener('click', function () {
+    wrap.classList.add('is-playing');
+    vid.controls = true;
+    vid.play();
+  });
+  vid.addEventListener('ended', function () {
+    wrap.classList.remove('is-playing');
+    vid.controls = false;
+  });
+}
 
 function initFloatSocials() {
   var el = document.createElement('div');
