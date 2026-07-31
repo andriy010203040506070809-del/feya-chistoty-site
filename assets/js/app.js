@@ -584,6 +584,7 @@ document.addEventListener('DOMContentLoaded', function () {
   initQuizEraser();
   initZoneTabs();
   initTetyanaVideo();
+  initCookieBanner();
 });
 
 function initTetyanaVideo() {
@@ -599,6 +600,25 @@ function initTetyanaVideo() {
   vid.addEventListener('ended', function () {
     wrap.classList.remove('is-playing');
     vid.controls = false;
+  });
+}
+
+function initCookieBanner() {
+  if (localStorage.getItem('feya_cookie_ok')) return;
+  var bar = document.createElement('div');
+  bar.className = 'cookie-bar';
+  bar.innerHTML =
+    '<p class="cookie-bar__text">Ми використовуємо cookie для коректної роботи сайту. ' +
+    '<a href="polityka.html">Політика конфіденційності</a></p>' +
+    '<button class="cookie-bar__btn" type="button">Зрозуміло</button>';
+  document.body.appendChild(bar);
+  requestAnimationFrame(function () {
+    requestAnimationFrame(function () { bar.classList.add('is-visible'); });
+  });
+  bar.querySelector('.cookie-bar__btn').addEventListener('click', function () {
+    bar.classList.remove('is-visible');
+    setTimeout(function () { bar.remove(); }, 400);
+    localStorage.setItem('feya_cookie_ok', '1');
   });
 }
 
