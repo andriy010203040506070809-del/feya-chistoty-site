@@ -3,7 +3,7 @@
 // Спільні header/footer/quiz вшиті як рядки й вставляються в [data-include].
 // ============================================================
 
-var FORM_ENDPOINT = 'https://script.google.com/macros/s/AKfycbyUzDaO5EfVXFZDV3qTZ25ppl2xpCbSKbWEaoCJM1XctXlivcTwEgdO3CYVt4x9qF_fJw/exec';
+var FORM_ENDPOINT = 'https://script.google.com/macros/s/AKfycbwd5WnzPGSaTkINmaPMhu8EmgUz75XF9FdY_-SlT35stQMHGq0zf9ciXWHqEQMWQubuXw/exec';
 var THANKS_URL = 'dyakuyemo.html';
 
 var IC = {
